@@ -19,9 +19,11 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
+	int L;
+
+	char str[] = "Last digit of";
+
 	L = n % 10;
-
-
 
 	if (L > 5)
 
