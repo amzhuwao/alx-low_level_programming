@@ -2,23 +2,27 @@
 
 /**
  * print_diagonal - diagonal lines made of backslashes
- * @n: number of \ to be printed
+ * @n: variable for length
  * Return: 0
  */
 
 void print_diagonal(int n)
 {
-	int a, b;
+	int spaces, slashes;
 
-	for (b = 1; b <= n; b++)
+	if (n <= 0)
 	{
-		for (a = 1; a < b; a++)
-			_putchar(' ');
-			_putchar('\\');
-			_putchar('\n');
-
+		_putchar('\n');
+		return;
 	}
 
-	if (n < 1)
-	_putchar('\n');
+	for (slashes = 0; slashes < n; slashes++)
+	{
+		for (spaces = 0; spaces < slashes; spaces++)
+		{
+			_putchar(' ');
+		}
+		_putchar('\\');
+		_putchar('\n');
+	}
 }
